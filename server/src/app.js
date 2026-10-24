@@ -16,7 +16,8 @@ import snapshotRoutes from "./routes/snapshot.js";
 export const app = express();
 
 app.disable("x-powered-by");
-if(env.TRUST_PROXY)app.set("trust proxy",env.TRUST_PROXY);
+// Environment variables are strings; Express requires a number for hop counts.
+if(env.TRUST_PROXY){const trustProxy=env.TRUST_PROXY.trim();app.set("trust proxy",/^\d+$/.test(trustProxy)?Number(trustProxy):trustProxy);}
 app.use(helmet());
 app.use(cors({ origin: clientOrigins }));
 app.use(express.json({ limit: "256kb" }));
