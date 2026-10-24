@@ -1,0 +1,11 @@
+node_modules
+server/node_modules
+dist
+src-tauri/target
+src-tauri/gen
+SmartCompany-Releases
+.git
+.env
+server/.env
+*.sqlite
+*.sqlite3
