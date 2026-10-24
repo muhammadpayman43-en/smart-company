@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /build
 COPY src-tauri ./src-tauri
+# The native permission guard embeds this shared policy at compile time.
+COPY src/shared ./src/shared
 RUN cargo build --manifest-path src-tauri/Cargo.toml --release --bin spice-management-app
 
 # Keep the production image small: Node API plus the compiled worker only.
