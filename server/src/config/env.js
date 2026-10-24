@@ -15,3 +15,4 @@ const envSchema = z.object({
 
 export const env = envSchema.parse(process.env);
 export const clientOrigins = env.CLIENT_ORIGINS.split(",").map((origin) => origin.trim());
+
