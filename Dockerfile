@@ -32,7 +32,8 @@ COPY server/package.json server/package-lock.json ./server/
 RUN npm ci --prefix server --omit=dev
 
 COPY server ./server
-COPY src/shared ./src/shared
+# Server report handlers reuse the existing frontend report engine and policies.
+COPY src ./src
 COPY --from=worker-build /build/src-tauri/target/release/spice-management-app /usr/local/bin/spice-management-app
 
 ENV NODE_ENV=production \
