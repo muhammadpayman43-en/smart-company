@@ -15,8 +15,8 @@ class DatabaseWorker {
   this.pending=new Map();this.counter=0;
   this.child=spawn(workerPath,["--database-worker"],{windowsHide:true,env:{...process.env,SPICE_DATABASE_PATH:databasePath},stdio:["pipe","pipe","pipe"]});
   createInterface({input:this.child.stdout}).on("line",line=>{let response;try{response=JSON.parse(line)}catch{return}const task=this.pending.get(response.id);if(!task)return;clearTimeout(task.timer);this.pending.delete(response.id);response.ok?task.resolve(response.result):task.reject(Object.assign(new Error(response.error),{code:response.error}));});
-  this.child.stderr.resume();
-  const fail=()=>{if(workers.get(databasePath)===this)workers.delete(databasePath);for(const task of this.pending.values()){clearTimeout(task.timer);task.reject(Object.assign(new Error("database_unavailable"),{status:503}));}this.pending.clear();};
+  let stderr="";this.child.stderr.on("data",chunk=>{stderr+=chunk;});
+  const fail=()=>{const detail=stderr.trim();if(detail)console.error("Database worker unavailable:",detail);if(workers.get(databasePath)===this)workers.delete(databasePath);for(const task of this.pending.values()){clearTimeout(task.timer);task.reject(Object.assign(new Error("database_unavailable"),{status:503}));}this.pending.clear();};
   this.child.stdin.on("error",fail);
   this.child.on("error",fail);this.child.on("exit",fail);
  }
