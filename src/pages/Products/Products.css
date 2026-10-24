@@ -1,0 +1,1461 @@
+.products-page {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 28px clamp(18px, 3vw, 42px) 48px;
+
+    color: var(--color-text);
+
+}
+
+.products-page-heading,
+
+.products-section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+}
+
+.products-page-heading {
+
+    margin-bottom: 26px;
+
+}
+
+.products-page-heading p,
+
+.product-dialog-header p {
+
+    margin: 0 0 5px;
+
+    color: var(--color-primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.products-page-heading h1,
+
+.product-dialog-header h2 {
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 24px;
+
+}
+
+.products-primary-button,
+
+.products-secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.products-primary-button {
+
+    background: var(--color-primary);
+
+    color: var(--color-primary-contrast);
+
+}
+
+.products-primary-button:hover {
+
+    background: var(--color-primary-hover);
+
+}
+
+.products-secondary-button {
+
+    border-color: var(--color-border-strong);
+
+    background: var(--color-surface);
+
+    color: var(--color-text);
+
+}
+
+.products-primary-button:focus-visible,
+
+.products-secondary-button:focus-visible,
+
+.product-dialog-close:focus-visible,
+
+.product-select-with-add > button:focus-visible {
+
+    outline: 3px solid var(--color-focus);
+
+    outline-offset: 2px;
+
+}
+
+.products-primary-button:disabled {
+
+    cursor: wait;
+
+    opacity: 0.65;
+
+}
+
+.products-toolbar {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 16px;
+
+    margin-bottom: 26px;
+
+    padding: 16px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 6px;
+
+    background: var(--color-surface);
+
+}
+
+.products-search,
+
+.products-filter {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: var(--color-text-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.products-search {
+
+    position: relative;
+
+    flex: 1;
+
+}
+
+.products-search > svg {
+
+    position: absolute;
+
+    bottom: 11px;
+
+    left: 12px;
+
+    width: 17px;
+
+    height: 17px;
+
+}
+
+.products-search input,
+
+.products-filter select,
+
+.product-form input,
+
+.product-form select,
+
+.product-form textarea {
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 40px;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--color-border-strong);
+
+    border-radius: 4px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text);
+
+    font: inherit;
+
+    font-size: 13px;
+
+}
+
+.products-search input {
+
+    padding-left: 38px;
+
+}
+
+.products-search input:focus,
+
+.products-filter select:focus,
+
+.product-form input:focus,
+
+.product-form select:focus,
+
+.product-form textarea:focus {
+
+    border-color: var(--color-primary);
+
+    outline: 2px solid var(--color-focus);
+
+    outline-offset: 1px;
+
+}
+
+.products-filter {
+
+    width: min(250px, 32%);
+
+}
+
+.products-table-section,
+
+.formulas-table-section {
+
+    margin-bottom: 32px;
+
+}
+
+.products-section-heading {
+
+    margin-bottom: 12px;
+
+}
+
+.products-section-heading h2 {
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 16px;
+
+}
+
+.products-section-heading p {
+
+    margin: 5px 0 0;
+
+    color: var(--color-text-subtle);
+
+    font-size: 12px;
+
+}
+
+.products-section-heading > span {
+
+    display: grid;
+
+    min-width: 28px;
+
+    height: 28px;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: var(--color-primary-subtle);
+
+    color: var(--color-primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.products-table-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 6px;
+
+    background: var(--color-surface);
+
+}
+
+.products-table {
+
+    width: 100%;
+
+    min-width: 680px;
+
+    border-collapse: collapse;
+
+    text-align: start;
+
+}
+
+.formulas-table {
+
+    min-width: 600px;
+
+}
+
+.products-table th,
+
+.products-table td {
+
+    padding: 13px 15px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    text-align: start;
+
+    font-size: 13px;
+
+}
+
+.products-table th {
+
+    background: var(--color-surface-muted);
+
+    color: var(--color-text-muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+.products-table tr:last-child td {
+
+    border-bottom: 0;
+
+}
+
+.products-table tbody tr:hover {
+
+    background: var(--color-surface-hover);
+
+}
+
+.products-medicine-name {
+
+    color: var(--color-text);
+
+    font-weight: 700;
+
+}
+
+.products-table td small {
+
+    color: var(--color-text-subtle);
+
+    font-size: 11px;
+
+}
+
+.products-empty-cell {
+
+    height: 72px;
+
+    color: var(--color-text-subtle);
+
+    text-align: center !important;
+
+}
+
+.medicine-row-actions { display: flex; align-items: center; gap: 8px; }
+.medicine-row-action {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.medicine-row-action:hover { transform: translateY(-1px); }
+.medicine-row-action svg { width: 15px; height: 15px; }
+.medicine-row-edit { color: var(--color-primary); }
+.medicine-row-edit:hover { border-color: var(--color-primary); background: var(--color-primary-subtle); }
+.medicine-row-delete { color: #c2413b; }
+.medicine-row-delete:hover { border-color: #c2413b; background: #fff1f0; }
+
+.products-page-error,
+
+.product-form-error {
+
+    color: var(--color-danger);
+
+    font-size: 13px;
+
+}
+
+.product-dialog-backdrop {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1100;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 20px;
+
+    background: var(--color-overlay);
+
+}
+
+.product-dialog {
+
+    width: min(100%, 560px);
+
+    max-height: min(90vh, 820px);
+
+    overflow-y: auto;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 7px;
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.product-dialog-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+.product-dialog-header h2 {
+
+    font-size: 19px;
+
+}
+
+.product-dialog-close {
+
+    display: grid;
+
+    width: 36px;
+
+    height: 36px;
+
+    place-items: center;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: var(--color-surface-muted);
+
+    color: var(--color-text-muted);
+
+    cursor: pointer;
+
+}
+
+.product-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 22px 24px 24px;
+
+}
+
+.product-form > label,
+
+.product-form-row > label,
+
+.product-select-with-add > label {
+
+    display: flex;
+
+    min-width: 0;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: var(--color-text-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.product-form textarea {
+
+    resize: vertical;
+
+}
+
+.product-form-row {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+.product-select-with-add {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: end;
+
+    gap: 9px;
+
+}
+
+.product-select-with-add > button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--color-border-strong);
+
+    border-radius: 4px;
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.product-select-with-add > button svg {
+
+    width: 15px;
+
+    height: 15px;
+
+}
+
+.price-basis-fieldset {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin: 0;
+
+    padding: 12px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 4px;
+
+}
+
+.price-basis-fieldset legend {
+
+    padding: 0 5px;
+
+    color: var(--color-text-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.price-basis-fieldset label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--color-text);
+
+    font-size: 13px;
+
+}
+
+.price-basis-fieldset input {
+
+    accent-color: var(--color-primary);
+
+}
+
+.product-dialog-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 5px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+@media (max-width: 680px) {
+
+    .products-page {
+
+        padding: 22px 14px 36px;
+
+    }
+
+    .products-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+    .products-filter {
+
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .products-page-heading,
+
+    .products-section-heading {
+
+        align-items: flex-start;
+
+    }
+
+    .products-page-heading h1 {
+
+        font-size: 21px;
+
+    }
+
+    .products-primary-button,
+
+    .products-secondary-button {
+
+        gap: 5px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+
+    }
+
+    .product-dialog-backdrop {
+
+        padding: 10px;
+
+    }
+
+    .product-dialog-header,
+
+    .product-form {
+
+        padding-right: 16px;
+
+        padding-left: 16px;
+
+    }
+
+}
+
+/* Clean, consistent product workspace */
+.products-page {
+  width: 100%;
+  max-width: 1480px;
+  padding: clamp(20px, 3vw, 38px) clamp(16px, 3vw, 40px) 48px;
+}
+
+.products-page-heading {
+  margin-bottom: 22px;
+}
+
+.products-page-heading p {
+  margin-bottom: 7px;
+  color: var(--color-text-subtle);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.products-page-heading h1 {
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 750;
+  letter-spacing: -.025em;
+}
+
+.products-primary-button,
+.products-secondary-button {
+  min-height: 42px;
+  border-radius: 9px;
+  font-size: 13px;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.products-primary-button:hover { transform: translateY(-1px); }
+.products-toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(300px, 340px) auto;
+  align-items: end;
+  margin-bottom: 22px;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.products-search,
+.products-filter { gap: 8px; font-size: 12px; }
+.products-filter { width: 100%; }
+.products-add-medicine-button { min-width: 150px; white-space: nowrap; }
+.products-toolbar-actions,
+.products-excel-actions { display: flex; align-items: center; gap: 8px; }
+.products-excel-actions .products-secondary-button { white-space: nowrap; }
+.product-import-dialog-content { min-height: 140px; }
+.product-import-dialog-content > .excel-import-preview { max-height: min(45vh, 380px); overflow: auto; }
+.products-search > svg { inset-inline-start: 13px; inset-inline-end: auto; bottom: 13px; color: var(--color-text-subtle); }
+.products-search input { padding-inline-start: 40px; padding-inline-end: 12px; }
+.products-search input,
+.products-filter select,
+.product-form input,
+.product-form select,
+.product-form textarea {
+  min-height: 44px;
+  border-radius: 8px;
+}
+.products-search input:focus,
+.products-filter select:focus,
+.product-form input:focus,
+.product-form select:focus,
+.product-form textarea:focus { outline: none; box-shadow: var(--shadow-focus); }
+
+.products-table-section,
+.excel-import-section {
+  margin-bottom: 22px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.products-section-heading {
+  margin-bottom: 16px;
+}
+
+.products-section-heading > div > span {
+  display: inline-grid;
+  min-width: 26px;
+  height: 26px;
+  margin-inline-start: 9px;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.products-section-heading h2 { font-size: 16px; font-weight: 750; }
+.products-section-heading p { margin-top: 6px; line-height: 1.6; }
+.products-table-scroll { border-color: var(--color-border); border-radius: 11px; }
+.products-table { min-width: 760px; }
+.products-table th,
+.products-table td { padding: 13px 15px; line-height: 1.5; }
+.products-table th { background: var(--color-surface-muted); font-size: 11px; }
+.products-table tbody tr:last-child td { border-bottom: 0; }
+.products-table tbody tr:hover { background: color-mix(in srgb, var(--color-primary-subtle) 45%, var(--color-surface)); }
+.products-medicine-name { font-weight: 700; }
+.products-empty-cell { height: 100px; }
+
+.excel-import-container { gap: 14px; padding: 18px; border-radius: 12px; }
+.excel-import-dropzone { min-height: 116px; border-radius: 11px; }
+.excel-import-dropzone:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+.excel-import-preview { border-radius: 10px; }
+.excel-import-preview h3 { margin: 0; padding: 12px 14px; border-bottom: 1px solid var(--color-border); font-size: 13px; }
+.excel-import-summary { margin: 0; border-radius: 9px; }
+
+.product-dialog {
+  width: min(100%, 700px);
+  border-radius: 16px;
+}
+.product-dialog-header { padding: 18px 22px; }
+.product-dialog-header h2 { font-size: 18px; font-weight: 750; }
+.product-dialog-close { border-radius: 9px; }
+.product-form { gap: 16px; padding: 22px; }
+.product-form > label,
+.product-form-row > label,
+.product-select-with-add > label { gap: 8px; color: var(--color-text); font-size: 12px; font-weight: 650; }
+.product-form input,
+.product-form select,
+.product-form textarea { padding: 10px 12px; }
+.product-select-with-add > button { min-height: 44px; border-radius: 8px; white-space: nowrap; }
+.price-basis-fieldset { border-radius: 9px; }
+.product-dialog-actions { gap: 10px; }
+
+@media (max-width: 1100px) and (min-width: 681px) {
+  .products-toolbar { grid-template-columns: minmax(0, 1fr) minmax(250px, 320px); }
+  .products-search,
+  .products-filter,
+  .products-toolbar-actions { grid-column: 1 / -1; }
+  .products-toolbar-actions { justify-content: flex-end; }
+}
+
+@media (max-width: 680px) {
+  .products-table-section,
+  .excel-import-section { padding: 15px; }
+  .products-toolbar { grid-template-columns: minmax(0, 1fr); padding: 15px; }
+  .products-filter { width: 100%; }
+  .products-toolbar-actions { align-items: stretch; flex-direction: column; }
+  .products-excel-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .products-add-medicine-button,
+  .products-excel-actions .products-secondary-button { width: 100%; min-width: 0; }
+}
+
+.medicine-dialog {
+  width: min(100%, 820px);
+  max-height: min(92vh, 900px);
+  border-radius: 20px;
+}
+
+.medicine-dialog .product-dialog-header {
+  padding: 22px 28px;
+  background: linear-gradient(125deg, var(--color-primary-subtle), var(--color-surface));
+}
+
+.medicine-dialog-heading {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 15px;
+}
+
+.medicine-dialog-heading-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-radius: 16px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.medicine-dialog-heading-icon svg { width: 24px; height: 24px; }
+.medicine-dialog-kicker { color: var(--color-primary); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.medicine-dialog .product-dialog-header h2 { margin: 3px 0; font-size: 21px; letter-spacing: -.02em; }
+.medicine-dialog .product-dialog-header p { max-width: 540px; margin: 0; color: var(--color-text-muted); font-size: 12px; font-weight: 400; }
+.medicine-dialog .product-dialog-close { align-self: flex-start; border-radius: 10px; }
+
+.medicine-dialog .product-form {
+  gap: 14px;
+  padding: 22px 28px 26px;
+}
+
+.medicine-form-section {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+
+.medicine-form-section > h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.medicine-form-section .product-form-row { width: 100%; gap: 14px; }
+.medicine-dialog .product-form > label,
+.medicine-dialog .product-form-row > label,
+.medicine-dialog .product-select-with-add > label { gap: 7px; color: var(--color-text); font-size: 12px; font-weight: 650; }
+.medicine-dialog .product-form input,
+.medicine-dialog .product-form select { min-height: 46px; border-radius: 9px; background-color: var(--color-surface); }
+.medicine-dialog .product-form input:focus,
+.medicine-dialog .product-form select:focus { border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+
+.medicine-dialog .product-select-with-add { display: block; min-width: 0; }
+.product-select-control { position: relative; min-width: 0; }
+.product-select-control select {
+  appearance: none;
+  padding-inline-start: 132px;
+  padding-inline-end: 34px;
+}
+.product-select-control > button {
+  position: absolute;
+  inset-inline-start: 6px;
+  top: 50%;
+  display: inline-flex;
+  max-width: 122px;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 8px;
+  overflow: hidden;
+  transform: translateY(-50%);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+  border-radius: 7px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-select-control > button svg { width: 13px; height: 13px; flex: 0 0 13px; }
+.product-select-control > button:hover { background: var(--color-surface-hover); }
+.product-select-control > button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 1px; }
+.product-select-chevron {
+  position: absolute;
+  inset-inline-end: 12px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+.medicine-dialog .product-dialog-actions { margin-top: 2px; padding-top: 16px; }
+.medicine-dialog .product-dialog-actions button { min-width: 112px; min-height: 44px; border-radius: 9px; }
+
+@media (max-width: 600px) {
+  .medicine-dialog .product-dialog-header { padding: 17px 18px; }
+  .medicine-dialog .product-form { padding: 16px 18px 20px; }
+  .medicine-form-section { padding: 13px; }
+}
+
+@media (max-width: 480px) {
+  .medicine-dialog { max-height: 94vh; border-radius: 15px; }
+  .medicine-dialog-heading { gap: 10px; }
+  .medicine-dialog-heading-icon { width: 42px; height: 42px; flex-basis: 42px; border-radius: 13px; }
+  .medicine-dialog .product-dialog-header h2 { font-size: 18px; }
+  .medicine-dialog .product-form-row { grid-template-columns: minmax(0, 1fr); }
+  .product-select-control select { padding-inline-start: 124px; padding-inline-end: 32px; }
+  .product-select-control > button { max-width: 114px; }
+}
+
+@media (max-width: 480px) {
+  .products-page { padding: 18px 12px 30px; }
+  .products-page-heading > button { width: auto; }
+  .products-page-heading { align-items: center; }
+  .products-table-section,
+  .excel-import-section { padding: 12px; }
+  .products-section-heading { align-items: center; }
+}
+
+.excel-import-section {
+
+  margin-bottom: 32px;
+
+}
+
+.excel-import-container {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 6px;
+
+  padding: 20px;
+
+}
+
+.excel-import-input {
+
+  display: none;
+
+}
+
+.excel-import-dropzone {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 28px;
+
+  border: 2px dashed var(--color-border-strong);
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: border-color 0.2s, background-color 0.2s;
+
+  background: var(--color-surface-muted);
+
+}
+
+.excel-import-dropzone:hover,
+
+.excel-import-dropzone.is-dragging {
+
+  border-color: var(--color-primary);
+
+  background: var(--color-primary-subtle);
+
+}
+
+.excel-import-dropzone-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-text-muted);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+.excel-import-dropzone-icon svg {
+
+  width: 18px;
+
+  height: 18px;
+
+}
+
+.excel-import-summary {
+
+  padding: 10px 12px;
+
+  border-radius: 4px;
+
+  background: var(--color-surface-muted);
+
+  font-size: 13px;
+
+  color: var(--color-text-muted);
+
+}
+
+.excel-import-preview {
+
+  margin-top: 12px;
+
+  overflow: auto;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 6px;
+
+  max-height: 240px;
+
+}
+
+.excel-import-preview-scroll {
+
+  width: 100%;
+
+  min-width: 600px;
+
+}
+
+.excel-import-actions {
+
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+}
+
+.excel-import-actions .products-secondary-button {
+
+  white-space: nowrap;
+
+}
+
+.field-error {
+
+  color: var(--color-danger);
+
+}
+
+.spinner {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+}
+
+.spinner::before {
+
+  content: "";
+
+  display: inline-block;
+
+  width: 12px;
+
+  height: 12px;
+
+  border: 2px solid var(--color-border);
+
+  border-top-color: var(--color-primary);
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+
+}
+
+@keyframes spin {
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   Products page layout refinements
+   Keep page sections consistent and responsive.
+   ========================================================= */
+
+.products-page {
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+.products-page-heading {
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.products-page-heading > div {
+    min-width: 0;
+}
+
+.products-page-heading p {
+    line-height: 1.5;
+}
+
+.products-toolbar {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 250px);
+    align-items: end;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.products-search input,
+.products-filter select {
+    box-sizing: border-box;
+    min-height: 44px;
+    border-radius: 7px;
+}
+
+.products-table-section {
+    margin-bottom: 30px;
+}
+
+.products-table-section .products-table { min-width: 1080px; }
+
+.products-table-scroll {
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+.products-table {
+    min-width: 720px;
+}
+
+.products-table th,
+.products-table td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.products-table th {
+    white-space: nowrap;
+}
+
+.products-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.excel-import-section {
+    margin-top: 28px;
+    margin-bottom: 32px;
+}
+
+.excel-import-container {
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.excel-import-dropzone {
+    min-height: 100px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.excel-import-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.excel-import-preview-scroll {
+    overflow-x: auto;
+}
+
+.product-dialog,
+.product-dialog-backdrop {
+    box-sizing: border-box;
+}
+
+@media (max-width: 680px) {
+    .products-toolbar {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .products-filter {
+        width: 100%;
+    }
+
+    .products-table {
+        min-width: 680px;
+    }
+
+    .excel-import-container {
+        padding: 14px;
+    }
+
+    .excel-import-dropzone {
+        padding: 22px 14px;
+        text-align: center;
+    }
+
+    .excel-import-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .excel-import-actions button {
+        width: 100%;
+        min-height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-page {
+        padding: 20px 12px 32px;
+    }
+
+    .products-page-heading {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .products-page-heading h1 {
+        font-size: 21px;
+    }
+
+    .products-page-heading > button {
+        width: 100%;
+    }
+
+    .products-section-heading {
+        gap: 10px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 11px 12px;
+    }
+
+    .excel-import-dropzone-icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .product-form-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+  .products-page-heading > button { width: auto; }
+  .products-page-heading { align-items: center; }
+}
+
+.products-search > svg { left: auto; }
+
+.products-toolbar { grid-template-columns: minmax(220px, 1fr) minmax(300px, 340px) auto; }
+.products-filter { width: 100%; max-width: 380px; }
+.products-toolbar-actions,
+.products-excel-actions { display: flex; align-items: center; gap: 8px; }
+.products-import-button {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+.products-import-button:hover { border-color: var(--color-primary-hover); background: var(--color-surface-hover); }
+.products-export-button {
+  border-color: var(--color-secondary);
+  background: var(--color-secondary-subtle);
+  color: var(--color-text);
+}
+.products-export-button svg { color: var(--color-secondary-hover); }
+.products-export-button:hover { border-color: var(--color-secondary-hover); background: var(--color-surface-hover); }
+.products-export-success {
+  margin: -8px 0 16px;
+  padding: 10px 13px;
+  border: 1px solid color-mix(in srgb, var(--color-success) 35%, var(--color-border));
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--color-success) 10%, var(--color-surface));
+  color: var(--color-success);
+  font-size: 13px;
+}
+.product-import-dialog-content { min-height: 140px; }
+.product-import-dialog-content > .excel-import-preview { max-height: min(45vh, 380px); overflow: auto; }
+
+@media (max-width: 1350px) and (min-width: 681px) {
+  .products-toolbar { grid-template-columns: minmax(0, 1fr) minmax(250px, 320px); }
+  .products-search,
+  .products-filter,
+  .products-toolbar-actions { grid-column: 1 / -1; }
+  .products-toolbar-actions { justify-content: flex-end; }
+}
+
+@media (max-width: 680px) {
+  .products-toolbar { grid-template-columns: minmax(0, 1fr); }
+  .products-filter { max-width: none; }
+  .products-search,
+  .products-filter,
+  .products-toolbar-actions { grid-column: auto; }
+  .products-toolbar-actions { align-items: stretch; flex-direction: column; }
+  .products-excel-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .products-add-medicine-button,
+  .products-excel-actions .products-secondary-button { width: 100%; min-width: 0; }
+}

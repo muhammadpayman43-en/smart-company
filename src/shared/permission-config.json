@@ -1,0 +1,547 @@
+{
+  "modules": [
+    "dashboard",
+    "products",
+    "purchases",
+    "sales",
+    "customers",
+    "suppliers",
+    "inventory",
+    "expenses",
+    "withdrawals",
+    "cash_register",
+    "reports",
+    "settings",
+    "users"
+  ],
+  "actions": [
+    "view",
+    "create",
+    "edit",
+    "delete",
+    "print"
+  ],
+  "roles": [
+    "super_admin",
+    "admin",
+    "manager",
+    "sales_operator",
+    "purchase_operator",
+    "accountant",
+    "viewer"
+  ],
+  "rolePermissions": {
+    "super_admin": {
+      "dashboard": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "products": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "purchases": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "sales": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "customers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "suppliers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "inventory": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "expenses": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "withdrawals": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "cash_register": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "reports": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "settings": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "users": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true,
+        "manage": true
+      }
+    },
+    "admin": {
+      "dashboard": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "products": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "purchases": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "sales": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "customers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "suppliers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "inventory": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "expenses": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "withdrawals": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "cash_register": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "reports": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "settings": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true
+      },
+      "users": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "print": true,
+        "manage": true
+      }
+    },
+    "manager": {
+      "dashboard": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "products": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "purchases": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "sales": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "customers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "suppliers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "inventory": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "expenses": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "withdrawals": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "cash_register": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "reports": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      }
+    },
+    "sales_operator": {
+      "products": {
+        "view": true
+      },
+      "inventory": {
+        "view": true
+      },
+      "customers": {
+        "view": true,
+        "create": true
+      },
+      "sales": {
+        "view": true,
+        "create": true,
+        "print": true
+      }
+    },
+    "purchase_operator": {
+      "products": {
+        "view": true
+      },
+      "inventory": {
+        "view": true
+      },
+      "suppliers": {
+        "view": true
+      },
+      "purchases": {
+        "view": true,
+        "create": true,
+        "print": true
+      }
+    },
+    "accountant": {
+      "purchases": {
+        "view": true,
+        "print": true
+      },
+      "sales": {
+        "view": true,
+        "print": true
+      },
+      "customers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "suppliers": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "expenses": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "withdrawals": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "cash_register": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      },
+      "reports": {
+        "view": true,
+        "create": true,
+        "edit": true,
+        "print": true
+      }
+    },
+    "viewer": {
+      "products": {
+        "view": true
+      },
+      "inventory": {
+        "view": true
+      },
+      "purchases": {
+        "view": true
+      },
+      "sales": {
+        "view": true
+      },
+      "customers": {
+        "view": true
+      },
+      "suppliers": {
+        "view": true
+      }
+    }
+  },
+  "commandAccess": {
+    "list_medicine_formulas": [
+      "products",
+      "view"
+    ],
+    "create_medicine_formula": [
+      "products",
+      "create"
+    ],
+    "list_pharmaceutical_companies": [
+      "suppliers",
+      "view"
+    ],
+    "create_pharmaceutical_company": [
+      "suppliers",
+      "create"
+    ],
+    "update_pharmaceutical_company": [
+      "suppliers",
+      "edit"
+    ],
+    "delete_pharmaceutical_company": [
+      "suppliers",
+      "delete"
+    ],
+    "get_company_purchase_account": [
+      "suppliers",
+      "view"
+    ],
+    "list_medicines": [
+      "products",
+      "view"
+    ],
+    "create_medicine": [
+      "products",
+      "create"
+    ],
+    "update_medicine": [
+      "products",
+      "edit"
+    ],
+    "delete_medicine": [
+      "products",
+      "delete"
+    ],
+    "import_medicines": [
+      "products",
+      "create"
+    ],
+    "list_purchases": [
+      "purchases",
+      "view"
+    ],
+    "get_purchase": [
+      "purchases",
+      "view"
+    ],
+    "create_purchase": [
+      "purchases",
+      "create"
+    ],
+    "record_purchase_payment": [
+      "suppliers",
+      "edit"
+    ],
+    "return_purchase": [
+      "purchases",
+      "delete"
+    ],
+    "delete_purchase": [
+      "purchases",
+      "delete"
+    ],
+    "list_sales": [
+      "sales",
+      "view"
+    ],
+    "get_sale": [
+      "sales",
+      "view"
+    ],
+    "create_sale": [
+      "sales",
+      "create"
+    ],
+    "record_sale_payment": [
+      "customers",
+      "edit"
+    ],
+    "cancel_sale": [
+      "sales",
+      "delete"
+    ],
+    "delete_sale": [
+      "sales",
+      "delete"
+    ],
+    "list_customers": [
+      "customers",
+      "view"
+    ],
+    "get_customer_account": [
+      "customers",
+      "view"
+    ],
+    "create_customer": [
+      "customers",
+      "create"
+    ],
+    "update_customer": [
+      "customers",
+      "edit"
+    ],
+    "delete_customer": [
+      "customers",
+      "delete"
+    ],
+    "record_customer_credit_settlement": [
+      "customers",
+      "edit"
+    ],
+    "get_company_info": null,
+    "get_revision": null,
+    "get_app_settings": null,
+    "save_app_settings": [
+      "settings",
+      "edit"
+    ],
+    "list_expiry_alerts": [
+      "inventory",
+      "view"
+    ],
+    "get_reports_data": [
+      "reports",
+      "view"
+    ],
+    "get_dashboard_data": [
+      "dashboard",
+      "view"
+    ],
+    "get_cash_register": [
+      "cash_register",
+      "view"
+    ],
+    "save_cash_document": [
+      "expenses",
+      "create"
+    ],
+    "delete_cash_document": [
+      "expenses",
+      "delete"
+    ],
+    "get_cash_document_history": [
+      "expenses",
+      "view"
+    ]
+  }
+}

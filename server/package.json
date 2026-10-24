@@ -1,0 +1,26 @@
+{
+  "name": "spice-management-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/chat.js && node --check src/config/env.js && node --check src/config/database.js && node --check src/models/Organization.js && node --check src/models/User.js && node --check src/models/ChatMessage.js && node --check src/models/SyncEvent.js && node --check src/middleware/authenticate.js && node --check src/routes/auth.js && node --check src/routes/sync.js && node --check src/access.js && node --check src/control.js && node --check src/database.js && node --check src/models/AuditLog.js && node --check src/routes/users.js && node --check src/routes/data.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "ws": "^8.22.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  }
+}

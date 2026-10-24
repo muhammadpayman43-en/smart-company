@@ -1,0 +1,48 @@
+.dashboard-shell {
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  flex: 0 0 auto;
+}
+
+.dashboard-content {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dashboard-empty-space {
+  flex: 1;
+  min-width: 0;
+}
+
+@media print {
+  .dashboard-shell,
+  .dashboard-main,
+  .dashboard-content {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+}

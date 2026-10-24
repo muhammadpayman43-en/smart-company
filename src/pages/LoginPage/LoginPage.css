@@ -1,0 +1,189 @@
+.login-page {
+  position: relative;
+  isolation: isolate;
+  height: 100dvh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: max(24px, var(--app-safe-bottom));
+  background:
+    radial-gradient(ellipse at 50% 18%, rgb(201 139 60 / 10%), transparent 40%),
+    var(--color-background);
+}
+
+.login-welcome {
+  width: min(760px, calc(100% - 40px));
+  margin: clamp(44px, 8vh, 88px) auto 0;
+  text-align: center;
+}
+
+.login-welcome-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-secondary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.login-welcome-kicker::before,
+.login-welcome-kicker::after {
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.login-welcome h1 {
+  margin: 14px 0 10px;
+  color: var(--color-text);
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 750;
+  letter-spacing: -.04em;
+}
+
+.login-welcome p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.database-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(1120px, calc(100% - 48px));
+  margin: 42px auto 54px;
+  gap: 20px;
+}
+
+.local-databases {
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto 64px;
+  padding: 26px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.local-databases-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.local-databases-heading h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.local-databases-heading p {
+  margin: 6px 0 0;
+  color: var(--color-text-subtle);
+  font-size: 13px;
+}
+
+.database-list-loading,
+.database-list-empty {
+  color: var(--color-text-subtle);
+  font-size: 13px;
+}
+
+.database-list-error {
+  margin: 0 0 14px;
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.local-database-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+  gap: 12px;
+}
+
+.local-database-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  min-height: 88px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: start;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.local-database-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.local-database-item:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.local-database-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.local-database-details {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.local-database-details strong,
+.local-database-details span,
+.local-database-details small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.local-database-details strong { font-size: 14px; }
+.local-database-details span { color: var(--color-text-muted); font-size: 12px; }
+.local-database-details small { color: var(--color-text-subtle); font-size: 10px; }
+.local-database-open { color: var(--color-primary); font-size: 12px; font-weight: 700; }
+
+@media (max-width: 760px) {
+  .login-welcome { width:calc(100% - 28px);margin:20px auto 0; }
+  .login-welcome-kicker { font-size:10px;letter-spacing:.08em; }
+  .login-welcome h1 { margin:8px 0 5px;font-size:clamp(21px,6vw,24px);letter-spacing:-.02em; }
+  .login-welcome p { max-width:430px;margin-inline:auto;font-size:13px;line-height:1.55; }
+  .database-options { grid-template-columns: 1fr; width: min(440px, calc(100% - 28px)); margin: 20px auto 24px; gap: 10px; }
+  .local-databases { width: calc(100% - 28px); margin-bottom:20px;padding:14px; border-radius:16px; }
+  .local-databases-heading { align-items:flex-start;flex-direction:column;margin-bottom:13px;padding-bottom:12px; }
+  .local-databases-heading h1 { font-size:17px; }
+  .local-databases-heading p { font-size:12px;line-height:1.55; }
+  .local-database-item { min-height:72px;padding:11px;border-radius:12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .local-database-item { transition: none; }
+}

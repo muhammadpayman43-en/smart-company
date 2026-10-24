@@ -1,0 +1,31 @@
+.settings-page { display: flex; flex-direction: column; gap: 20px; }
+.settings-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: end; }
+.settings-fields { border: 0; padding: 0; margin: 0; display: contents; }
+.settings-card { min-width: 0; padding: 20px; border: 1px solid var(--color-border); border-radius: 14px; background: var(--color-surface); box-shadow: var(--shadow-sm); }
+.settings-card h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 17px; color: var(--color-text); font-size: 15px; }
+.settings-card label { display: grid; gap: 8px; color: var(--color-text-muted); font-size: 12px; font-weight: 650; }
+.settings-rate-input,.settings-period-fields { display: flex; align-items: center; gap: 9px; }
+.settings-rate-input span,.settings-rate-input strong { flex: 0 0 auto; color: var(--color-text-muted); font-size: 12px; }
+.settings-rate-input input,.settings-period-fields input,.settings-period-fields select { width: 100%; min-width: 0; min-height: 42px; padding: 9px 11px; border: 1px solid var(--color-border-strong); border-radius: 9px; background: var(--color-surface); color: var(--color-text); }
+.settings-period-fields input { max-width: 120px; }
+.settings-form > .products-primary-button { justify-self: start; min-height: 42px; border-radius: 9px; }
+.settings-feedback { grid-column: 2; margin: 0; color: var(--color-success); font-weight: 650; }
+.settings-feedback.is-error { color: var(--color-danger); }
+.settings-alerts h2 svg { color: var(--color-warning); }
+.settings-backup > p { color: var(--color-text-muted); font-size: 12px; line-height: 1.9; }
+.settings-backup-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 14px; }
+.settings-empty { margin: 0; padding: 20px; color: var(--color-text-muted); text-align: center; }
+.expiry-days { display: inline-flex; padding: 4px 9px; border-radius: 99px; background: var(--color-warning); color: #fff; font-size: 11px; font-weight: 700; }
+.expiry-days.is-expired { background: var(--color-danger); }
+@media (max-width: 640px) { .settings-form { grid-template-columns: 1fr; } .settings-feedback { grid-column: auto; } }
+.license-card { margin-top: 2px; }
+.license-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(280px,1fr); gap:18px; }
+.license-grid>div { display:grid; gap:9px; align-content:start; }
+.license-grid span,.license-grid dt { color:var(--color-text-muted); font-size:12px; }
+.license-grid code { display:block; padding:12px; overflow-wrap:anywhere; border-radius:9px; background:var(--color-surface-muted); color:var(--color-primary); }
+.license-grid dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:0; }
+.license-grid dl>div { padding:11px; border:1px solid var(--color-border); border-radius:9px; }
+.license-grid dd { margin:5px 0 0; font-weight:650; overflow-wrap:anywhere; }
+.license-status { display:flex; align-items:center; gap:6px; color:var(--color-danger); }.license-status.is-active{color:var(--color-success)}
+.license-form { display:flex; align-items:stretch; gap:10px; margin-top:16px; }.license-form textarea{flex:1;min-width:0;resize:vertical;padding:10px;border:1px solid var(--color-border-strong);border-radius:9px;background:var(--color-surface);color:var(--color-text)}
+@media(max-width:640px){.license-grid{grid-template-columns:1fr}.license-grid dl{grid-template-columns:1fr 1fr}.license-form{flex-direction:column}.license-form button{min-height:46px}}

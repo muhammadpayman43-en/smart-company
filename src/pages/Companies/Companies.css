@@ -1,0 +1,75 @@
+.companies-table {
+  min-width: 820px;
+}
+
+.company-row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.company-icon-button {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.company-icon-button:hover {
+  background: var(--color-primary-subtle);
+}
+
+.company-icon-button.is-danger {
+  color: var(--color-danger);
+}
+
+.company-icon-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.company-icon-button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.company-account-backdrop { z-index: 1120; padding: 18px; overflow-y: auto; }
+.company-account-dialog { width: min(100%, 1080px); max-height: calc(100vh - 36px); margin: auto; overflow: hidden; display: flex; flex-direction: column; }
+.company-account-dialog > .product-dialog-header { flex: 0 0 auto; }
+.company-account-dialog > .product-dialog-header p { margin: 0 0 4px; color: var(--color-primary); font-size: 11px; font-weight: 750; }
+.company-account-dialog > .product-dialog-header span { display:block; margin-top:4px; color:var(--color-text-muted); font-size:12px; }
+.company-account-body { display:grid; gap:18px; min-height:0; padding:20px; overflow:auto; }
+.company-account-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.company-account-stats article { display:flex; min-height:86px; flex-direction:column; gap:7px; padding:13px; border:1px solid var(--color-border); border-radius:11px; background:var(--color-surface-muted); }
+.company-account-stats span { color:var(--color-text-muted); font-size:11px; }
+.company-account-stats strong { font-size:18px; font-variant-numeric:tabular-nums; }
+.company-account-print-heading { display:flex; justify-content:space-between; gap:15px; padding-bottom:12px; border-bottom:1px solid var(--color-border); }
+.company-account-print-heading h2 { margin:0; font-size:18px; }
+.company-purchase-table { min-width:800px; }
+.company-purchase-table small { display:block; color:var(--color-text-muted); font-size:10px; }
+.company-account-payment-history h3 { margin:0 0 8px; font-size:14px; }
+.company-account-print-total { display:flex; justify-content:flex-end; gap:20px; padding-top:12px; border-top:1px solid var(--color-border); }
+.company-account-actions { display:flex; justify-content:flex-end; }
+.company-account-loading { margin:auto; padding:28px; border-radius:12px; background:var(--color-surface); }
+@media(max-width:680px) { .company-account-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .company-account-body { padding:14px; } }
+@media print {
+  body * { visibility:hidden!important; }
+  .company-account-print,.company-account-print * { visibility:visible!important; }
+  .company-account-print { position:absolute!important; inset:0!important; width:100%!important; padding:0!important; color:#111!important; background:#fff!important; }
+  .company-account-print .products-table-scroll { overflow:visible!important; }
+  .company-account-print .products-table { min-width:0!important; }
+  .company-account-dialog .product-dialog-header,.company-account-stats,.company-account-actions { display:none!important; }
+}
+
+@media (max-width: 680px) {
+  .companies-table {
+    min-width: 760px;
+  }
+}
+
+
+

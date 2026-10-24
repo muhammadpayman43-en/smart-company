@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+html,body { overflow-x:hidden; }
+img,svg { max-width:100%; }
+
+@media (max-width: 768px) {
+  body { font-size: 13px; }
+  :is(button,input,select,textarea) { font-size: max(14px, 1em); }
+}
+
+body {
+  font-family: Inter, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  background: var(--color-background);
+
+  color: var(--color-text);
+}
+
+button { -webkit-tap-highlight-color: transparent; }
+::selection { background: var(--color-primary-subtle); color: var(--color-text); }
+
+button,
+input,
+textarea,
+select {
+  accent-color: var(--color-primary);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  color: var(--color-text);
+}
+
+::placeholder { color: var(--color-text-subtle); opacity: 1; }
+
+/* Shared presentation for the application’s existing data tables. */
+.products-table,
+.purchases-table,
+.sales-table,
+.companies-table,
+.customers-table,
+.accounts-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--color-text);
+}
+
+.products-table th,
+.purchases-table th,
+.sales-table th,
+.companies-table th,
+.customers-table th,
+.accounts-table th {
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .025em;
+}
+
+.products-table td,
+.purchases-table td,
+.sales-table td,
+.companies-table td,
+.customers-table td,
+.accounts-table td {
+  border-bottom-color: var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.products-table tbody tr,
+.purchases-table tbody tr,
+.sales-table tbody tr,
+.companies-table tbody tr,
+.customers-table tbody tr,
+.accounts-table tbody tr {
+  transition: background-color 120ms ease;
+}
+
+.products-table tbody tr:hover,
+.purchases-table tbody tr:hover,
+.sales-table tbody tr:hover,
+.companies-table tbody tr:hover,
+.customers-table tbody tr:hover,
+.accounts-table tbody tr:hover {
+  background: var(--color-surface-muted);
+}
+
+html[data-theme="dark"] option { background: var(--color-surface); color: var(--color-text); }
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .dashboard-shell {
+	background: var(--color-background);
+	color: var(--color-text);
+}

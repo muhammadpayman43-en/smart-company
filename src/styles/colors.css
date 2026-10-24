@@ -1,0 +1,70 @@
+:root,
+html[data-theme="light"] {
+	color-scheme: light;
+	--color-primary: #23466d;
+	--color-primary-hover: #193858;
+	--color-primary-subtle: #eaf1f8;
+	--color-primary-contrast: #ffffff;
+	--color-secondary: #3a9c98;
+	--color-secondary-hover: #287e7a;
+	--color-secondary-subtle: #e8f5f3;
+	--color-background: #f3f6fa;
+	--color-surface: #ffffff;
+	--color-surface-muted: #f7f9fc;
+	--color-surface-hover: #edf2f7;
+	--color-text: #1d2938;
+	--color-text-muted: #627184;
+	--color-text-subtle: #8794a3;
+	--color-border: #dfe6ee;
+	--color-border-strong: #c8d3df;
+	--color-focus: #6c9bcb;
+	--color-success: #24835a;
+	--color-danger: #c34d55;
+	--color-danger-subtle: #fff0f0;
+	--color-warning: #ae7621;
+	--color-overlay: rgb(18 32 50 / 48%);
+	--color-transparent: transparent;
+	--shadow-sm: 0 2px 8px rgb(26 45 68 / 5%);
+	--shadow-md: 0 8px 24px rgb(26 45 68 / 8%);
+	--shadow-lg: 0 18px 44px rgb(26 45 68 / 12%);
+	--shadow-overlay: 0 10px 25px rgb(0 0 0 / 18%);
+	--shadow-focus: 0 0 0 3px rgb(64 119 174 / 18%);
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-lg: 18px;
+	--space-page: clamp(18px, 2.1vw, 32px);
+	--app-safe-top: env(safe-area-inset-top, 0px);
+	--app-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html[data-theme="dark"] {
+	color-scheme: dark;
+	--color-primary: #8db7e2;
+	--color-primary-hover: #a8c9eb;
+	--color-primary-subtle: #22364b;
+	--color-primary-contrast: #14263a;
+	--color-secondary: #6bc1b9;
+	--color-secondary-hover: #88d1ca;
+	--color-secondary-subtle: #203b3b;
+	--color-background: #111a27;
+	--color-surface: #182434;
+	--color-surface-muted: #1e2d3f;
+	--color-surface-hover: #28394d;
+	--color-text: #e7edf5;
+	--color-text-muted: #abb8c8;
+	--color-text-subtle: #8291a3;
+	--color-border: #2d3d50;
+	--color-border-strong: #41546a;
+	--color-focus: #80aeda;
+	--color-success: #66c993;
+	--color-danger: #f08083;
+	--color-danger-subtle: #402a35;
+	--color-warning: #e3b15e;
+	--color-overlay: rgb(0 0 0 / 70%);
+	--color-transparent: transparent;
+	--shadow-sm: 0 2px 8px rgb(0 0 0 / 20%);
+	--shadow-md: 0 8px 24px rgb(0 0 0 / 26%);
+	--shadow-lg: 0 18px 44px rgb(0 0 0 / 34%);
+	--shadow-overlay: 0 10px 25px rgb(0 0 0 / 44%);
+	--shadow-focus: 0 0 0 3px rgb(128 174 218 / 25%);
+}

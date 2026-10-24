@@ -1,0 +1,71 @@
+.database-card {
+  min-width: 0;
+}
+
+.database-card-button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 188px;
+  flex-direction: column;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: start;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.database-card-button::after {
+  position: absolute;
+  right: -38px;
+  bottom: -78px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--card-accent);
+  border-radius: 50%;
+  opacity: .12;
+  content: "";
+  box-shadow: 0 0 0 18px color-mix(in srgb, var(--card-accent) 8%, transparent), 0 0 0 38px color-mix(in srgb, var(--card-accent) 5%, transparent);
+}
+
+.database-card.connect { --card-accent: var(--color-secondary); }
+.database-card.create,
+.database-card.open { --card-accent: var(--color-primary); }
+
+.database-card-button:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.database-card-button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.database-card-button:active { transform: translateY(-1px); }
+.database-card-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.database-card-lines { display: flex; align-items: center; gap: 6px; padding-top: 8px; }
+.database-card-lines span { height: 3px; border-radius: 50px; background: var(--card-accent); }
+.database-card-lines span:nth-child(1) { width: 30px; }
+.database-card-lines span:nth-child(2) { width: 54px; opacity: .35; }
+.database-card-lines span:nth-child(3) { width: 19px; }
+.database-card-icon { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 16px; background: color-mix(in srgb, var(--card-accent) 12%, var(--color-surface)); color: var(--card-accent); }
+.database-card-icon svg { width: 24px; height: 24px; stroke-width: 1.8; }
+.database-card-content { display: flex; flex-direction: column; gap: 6px; margin-top: 24px; }
+.database-card-content h2 { margin: 0; font-size: 19px; font-weight: 750; }
+.database-card-content p { max-width: 240px; margin: 0; color: var(--color-text-muted); font-size: 13px; line-height: 1.55; }
+
+@media (max-width: 760px) {
+  .database-card-button { min-height: 92px; padding: 14px 15px; flex-direction:row;align-items:center;gap:13px;border-radius:15px; }
+  .database-card-top { flex:0 0 auto; }
+  .database-card-lines,.database-card-button::after { display:none; }
+  .database-card-content { min-width:0;margin-top:0;gap:3px; }
+  .database-card-content h2 { font-size:16px; }
+  .database-card-content p { max-width:none;font-size:12px;line-height:1.45; }
+  .database-card-icon { width: 46px; height: 46px;border-radius:13px; }
+  .database-card-icon svg { width:21px;height:21px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .database-card-button { transition: none; } }
