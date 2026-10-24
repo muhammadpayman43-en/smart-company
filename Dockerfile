@@ -1,3 +1,14 @@
+# Tauri embeds the built frontend while compiling the native worker.
+FROM node:22-bookworm-slim AS frontend-build
+
+WORKDIR /frontend
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY index.html vite.config.js ./
+COPY public ./public
+COPY src ./src
+RUN npm run build
+
 # Build the native SQLite worker used by the Express API.
 FROM rust:1-bookworm AS worker-build
 
@@ -10,6 +21,7 @@ WORKDIR /build
 COPY src-tauri ./src-tauri
 # The native permission guard embeds this shared policy at compile time.
 COPY src/shared ./src/shared
+COPY --from=frontend-build /frontend/dist ./dist
 RUN cargo build --manifest-path src-tauri/Cargo.toml --release --bin spice-management-app
 
 # Keep the production image small: Node API plus the compiled worker only.
